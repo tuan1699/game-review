@@ -1,0 +1,15 @@
+.filter-field {
+  color: var(--color);
+  margin-bottom: 40px;
+}
+
+.filter-by {
+  margin-right: 50px;
+}
+
+.options {
+  border: none;
+  outline: none;
+  background: #272b30;
+  color: #fff;
+}
