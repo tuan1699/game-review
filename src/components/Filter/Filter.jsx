@@ -1,11 +1,7 @@
 import React from "react";
 import "./Filter.css";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  platformFilterChange,
-  genreFilterChange,
-  alphaBetFilterChange,
-} from "./Filter.slice";
+import { platformFilterChange, genreFilterChange } from "./Filter.slice";
 import { useState } from "react";
 
 const Filter = () => {
@@ -13,7 +9,7 @@ const Filter = () => {
 
   const [platform, setPlatform] = useState("All");
   const [genre, setGenre] = useState("All");
-  const [alphaBet, setAlphaBet] = useState("");
+  // const [alphaBet, setAlphaBet] = useState("");
 
   const handlePlatformChange = (e) => {
     setPlatform(e.target.value);
@@ -25,10 +21,10 @@ const Filter = () => {
     dispatch(genreFilterChange(e.target.value));
   };
 
-  const handleSortAlphaBet = (e) => {
-    setAlphaBet(e.target.value);
-    dispatch(alphaBetFilterChange(e.target.value));
-  };
+  // const handleSortAlphaBet = (e) => {
+  //   setAlphaBet(e.target.value);
+  //   dispatch(alphaBetFilterChange(e.target.value));
+  // };
 
   return (
     <div className="filter-field d-flex">
@@ -69,7 +65,7 @@ const Filter = () => {
           <option value="Fighting">Fighting</option>
         </select>
       </div>
-
+      {/* 
       <div className="filter-by">
         <label htmlFor="">Sort By:</label>
         <select
@@ -82,7 +78,7 @@ const Filter = () => {
           <option value="AZ">A - Z</option>
           <option value="ZA">Z - A</option>
         </select>
-      </div>
+      </div> */}
     </div>
   );
 };

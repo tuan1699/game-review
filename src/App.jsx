@@ -1,9 +1,7 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
-import GameList from "./components/GameList/GameList";
+
 import { fetchGames } from "./components/GameList/GameList.slice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 

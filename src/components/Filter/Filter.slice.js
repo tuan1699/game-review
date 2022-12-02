@@ -18,13 +18,12 @@ const filterSlice = createSlice({
       console.log(action.payload);
     },
 
-    alphaBetFilterChange: (state, action) => {
-      state.alphaBet = action.payload;
-      console.log(action.payload);
-    },
+    // alphaBetFilterChange: (state, action) => {
+    //   state.alphaBet = action.payload;
+    //   console.log(action.payload);
+    // },
   },
 });
 
 export default filterSlice;
-export const { platformFilterChange, genreFilterChange, alphaBetFilterChange } =
-  filterSlice.actions;
+export const { platformFilterChange, genreFilterChange } = filterSlice.actions;

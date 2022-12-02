@@ -17,7 +17,8 @@ export const fetchGames = createAsyncThunk("games.fetchGame", async () => {
   };
   const res = await fetch(
     "https://free-to-play-games-database.p.rapidapi.com/api/games",
-    options
+    options,
+    { mode: "no-cors" }
   );
 
   const data = await res.json();
@@ -36,7 +37,8 @@ export const fetchDetail = createAsyncThunk("game.detail", async (id) => {
 
   const res = await fetch(
     "https://free-to-play-games-database.p.rapidapi.com/api/game?id=" + id,
-    options
+    options,
+    { mode: "no-cors" }
   );
 
   const data = await res.json();
@@ -49,7 +51,11 @@ export const fetchDetail = createAsyncThunk("game.detail", async (id) => {
 const gameListSlice = createSlice({
   name: "gamesList",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    platformFilterChange: (state, action) => {
+      state.filter;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchGames.pending, (state, action) => {
